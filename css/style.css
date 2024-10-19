@@ -5,9 +5,12 @@
     padding: 0px;
 }
 
-body {
+header {
     display: flex;
-    justify-content: center;   
+    justify-content: center;  
+    width: 100%;
+    padding: 20px;
+    
       
 }
 
@@ -23,19 +26,65 @@ body {
     height: auto;
 }
 
-.container_cifrao{
+main{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 10px;
-    padding: 10px;
+}
+
+.container_money{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #0099DD;
     width: 300px;
     border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    
 }
 
-.container_cifrao img{
-    width: 300px;
-    height: 200px;
+.container_money img{
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(100%);
     
+}
+
+.container_stock{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0099DD;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+
+}
+
+.container_stock img {
+    width: 250px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.container_user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0099DD;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+.container_user img {
+    width: 250px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(100%);
+
 }
