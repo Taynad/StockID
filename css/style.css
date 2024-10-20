@@ -3,7 +3,10 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 header {
     display: flex;
@@ -18,7 +21,7 @@ header {
     margin: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .img_container img {
@@ -26,10 +29,14 @@ header {
     height: auto;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 main{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .container_money{
@@ -40,32 +47,62 @@ main{
     width: 300px;
     border-radius: 10px;
     margin: 10px;
+    margin-left: 60px;
     padding: 10px;
-    
+    position: relative;
+    transition: all 0.3s ease;
+   
 }
 
 .container_money img{
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 15px;
     width: 200px;
     height: auto;
     filter: brightness(0) saturate(100%) invert(100%);
     
 }
 
+.container_money:hover{
+    scale: 125%;
+}
+
+.container_stock:hover{
+    scale: 125%;
+}
+
+.container_user:hover{
+    scale: 125%;
+}
+
+figcaption {
+    margin-left: 30px;
+    margin-top: 10px; 
+    font-size: 40px;
+    font-weight: bolder;
+    color: #0376C4;
+    position: absolute;
+    bottom: -55px; 
+    width: 100%;
+}
+
+
 .container_stock{
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #0099DD;
+    width: 300px;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    width: 300px;
+    position: relative;
+    transition: all 0.3s ease;
 
 }
 
 .container_stock img {
+    margin: 10px;
     width: 250px;
     height: auto;
     filter: brightness(0) saturate(100%) invert(100%);
@@ -76,13 +113,18 @@ main{
     justify-content: space-around;
     align-items: center;
     background-color: #0099DD;
+    width: 300px;
     border-radius: 10px;
     margin: 10px;
+    margin-right: 50px;
     padding: 10px;
-    width: 300px;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .container_user img {
+    margin: 5px;
+    padding: 5px;
     width: 250px;
     height: auto;
     filter: brightness(0) saturate(100%) invert(100%);
