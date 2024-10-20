@@ -64,16 +64,21 @@ main{
 }
 
 .container_money:hover{
+    background-color:  #FFA33F;
     scale: 125%;
 }
 
 .container_stock:hover{
     scale: 125%;
+    background-color: #FFA33F;
 }
 
 .container_user:hover{
+    background-color: #FFA33F;
     scale: 125%;
 }
+
+
 
 figcaption {
     margin-left: 30px;
