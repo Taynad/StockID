@@ -29,7 +29,7 @@ header {
     height: auto;
 }
 
-body .body_index{
+body{
     overflow-x: hidden;
 }
 
@@ -78,6 +78,11 @@ main{
     scale: 125%;
 }
 
+.container_product:hover{
+    background-color: #FFA33F;
+    scale: 125%;
+}
+
 figcaption {
     margin-left: 30px;
     margin-top: 10px; 
@@ -111,7 +116,7 @@ figcaption {
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
-.container_user{
+.container_product{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -119,19 +124,44 @@ figcaption {
     width: 300px;
     border-radius: 10px;
     margin: 10px;
-    margin-right: 50px;
+    padding: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+
+}
+
+.container_product img {
+    margin: 10px;
+    width: 250px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+
+.container_user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0099DD;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
     padding: 10px;
     position: relative;
     transition: all 0.3s ease;
 }
 
 .container_user img {
-    margin: 5fpx;
-    padding: 5px;
-    width: 250px;
-    height: auto;
+    margin:10px;
+    width: 300px;
+    height: 250px;
     filter: brightness(0) saturate(100%) invert(100%);
 
+}
+
+.container_user figcaption{
+    margin-left: 50px;
 }
 
 
