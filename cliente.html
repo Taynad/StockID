@@ -32,9 +32,9 @@
 
 
         <section class="funcionalidades_cliente">
-            <div class="botoes_cliente">
+            <div class="botoes_cliente" >
                 <div class="cadastrar_cliente">
-                    <button><img src="assets/images/cadastrar_login.svg" alt="Cadastrar">Cliente novo</button>
+                    <button id="Cadastrar_cliente"><img src="assets/images/cadastrar_login.svg" alt="Cadastrar">Cliente novo</button>
                 </div>
                 <div class="pagar_divida">
                     <button><img src="assets/images/pagar_divida.svg" alt="Pagar divida">Pagar dívida</button>
@@ -45,60 +45,57 @@
             </div>
         </section>
 
-        <section class="listagem_clientes">
-            <table class="minha_tabela">
-                <thead>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Celular</th>
-                    <th>Divida</th>
-                    <th>Mais</th>
-                  </tr>
-                </thead>
-                    <tbody class="body">
-                      <tr>
-                        <td>Yasmin</td>
-                        <td>(11) 98222-8144</td>
-                        <td>R$ 525,00</td>
-                        <td><span class="mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></span></td>
-                      </tr>
-                      <tr>
-                        <td>Yasmin</td>
-                        <td>(11) 98222-8144</td>
-                        <td>R$ 525,00</td>
-                        <td><span class="mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></span></td>
-                      </tr>
-                      <tr>
-                        <td>Yasmin</td>
-                        <td>(11) 98222-8144</td>
-                        <td>R$ 525,00</td>
-                        <td><span class="mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></span></td>
-                      </tr>
-                      <tr>
-                        <td>Yasmin</td>
-                        <td>(11) 98222-8144</td>
-                        <td>R$ 525,00</td>
-                        <td><span class="mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></span></td>
-                      </tr>
-                      <tr>
-                        <td>Yasmin</td>
-                        <td>(11) 98222-8144</td>
-                        <td>R$ 525,00</td>
-                        <td><span class="mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></span></td>
-                      </tr>
-                      <tr>
-                        <td>Yasmin</td>
-                        <td>(11) 98222-8144</td>
-                        <td>R$ 525,00</td>
-                        <td><span class="mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></span></td>
-                      </tr>
-                    </tbody>
-              </table>
+        <section class="pop-up_geral" id="Pop-up_geral">
+          <div class="icone">
+            <img src="assets/images/cliente_pop-up.svg" alt="Cliente">
+          </div>
+
+          <form>
+            <div class="pop-up">
+              <label for="Nome">Nome</label>
+              <input type="text" id="nome" class="nome">
+            </div>
+
+            <div class="pop-up">
+              <label for="Pessoas_autorizadas">Pessoas autorizadas</label>
+              <input type="text" name="pessoas_autorizadas" id="pessoas_autorizadas">
+            </div>
+
+            <div class="coluna_pop-up">
+              <div class="pop-up" >
+                <label for="celular">Celular</label>
+                <input type="tel" name="celular" id="celular">
+              </div>
+              <div class="pop-up">
+                <label for="divida">Divida</label>
+                <input type="number" placeholder="R$ 0,00">
+              </div>
+              <div class="pop-up">
+                <label for="limite_total">Limite total</label>
+                <input type="number" placeholder="R$ 0,00">
+              </div>
+              <div class="pop-up">
+                <label for="limite_atual">Limite atual</label>
+                <input type="number" placeholder="R$ 0,00">
+              </div>
+            </div>
+
+            <div class="botoes_cliente">
+              <div class="btn_cancelar">
+                <button type="button" class="btn_cancelar"><img src="assets/images/btn_cancelar.svg" alt="Cancelar">Cancelar</button>
+              </div>
+              <div class="btn_cadastrar">
+                <button type="button"><img src="assets/images/cadastrar_login.svg" alt="Cadastrar cliente">Cadastrar</button>
+              </div>
+            </div>
+
+          </form>
 
         </section>
 
         
     </main>
     
+    <script src="javascript/cliente.js"></script>
 </body>
 </html>

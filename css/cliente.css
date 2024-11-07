@@ -111,7 +111,7 @@ input {
     height: 40px;
 }
 
-button{
+.funcionalidades_cliente button{
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -124,11 +124,11 @@ button{
     padding: 5px;
 }
 
-button:hover img{
+.funcionalidades_cliente button:hover img{
     filter: brightness(0) saturate(100%) invert(100%);
 }
 
-button:hover{
+.funcionalidades_cliente button:hover{
     color: white;
     background-color: #FF9933;
     transform: scale(1.1);
@@ -136,40 +136,150 @@ button:hover{
     box-shadow: 2px 2px 10px #FF9933
 }
 
+.icone {
+    display: flex;
+    justify-content: center;
+}
 
-table {
-    margin-left: 30px;
-    margin-top: 35px;
-    border-collapse: collapse;
-    width: 95%;
-    overflow: hidden;
-  }
-  
-  th, td {
-    padding: 15px;
-    text-align: center;
-
-  }
-  
-  th {
-    color: #005072;
-    font-size: 35px;
-    font-weight: bolder;
-
-  }
-
-  tbody {
-    background-color: #0099dd;
-    border: 5px solid #FF9933 ;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-.mais img {
-    width: 50px;
-    height: 50px;
+.icone img{
+    width: 120px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 
+
+.pop-up_geral{
+    background-color: #DAEBF2;
+    border: 5px solid #0099dd;
+    border-radius: 15px;
+    width: 550px;
+    padding: 25px;
+    padding-top: 0px;
+    width: 40%;
+    height: 60%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.pop-up_geral.active{
+    display: flex;
+
+}
+
+.pop-up{
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+.pop-up label{
+    color: #0099dd;
+    font-weight: bolder;
+    font-size: 25px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.pop-up input{
+    border: 3px solid #0099dd;
+    background-color: white;
+    color: #263672;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius:20px;
+    height: 30px;
+    width: 100%;
+}
+
+.coluna_pop-up{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.coluna_pop-up input{
+    padding-left: 2px;
+}
+
+.coluna_pop-up .pop-up {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+
+.btn_cancelar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #FB0000;
+    background-color: white;
+    border: 3px solid #FB0000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 5px;
+   
+    
+}
+
+.btn_cadastrar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #FF9933;
+    background-color: white;
+    border: 3px solid #FF9933;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    padding: 5px;
+    
+}
+
+.btn_cadastrar img{
+    margin-right: 10px;
+    
+}
+
+.btn_cancelar img{
+    margin-right: 10px;
+    
+}
+
+.btn_cadastrar :hover img{
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.btn_cadastrar button:hover{
+    color: white;
+    background-color: #FF9933;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px #FF9933
+}
+
+.btn_cancelar :hover img{
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.btn_cancelar button:hover{
+    color: white;
+    background-color: #FB0000;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px #FB0000
+}
 
