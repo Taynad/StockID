@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html"><img src="assets/images/stockid_svg2.svg" alt="" class="logo"></a>
+            <a href="index.html"><img src="assets/images/logo _header.svg" alt="" class="logo"></a>
         </nav>
 
         <div class="titulo_cliente">
@@ -34,19 +34,20 @@
         <section class="funcionalidades_cliente">
             <div class="botoes_cliente" >
                 <div class="cadastrar_cliente">
-                    <button id="Cadastrar_cliente"><img src="assets/images/cadastrar_login.svg" alt="Cadastrar">Cliente novo</button>
+                    <button id="cadastrar_cliente"><img src="assets/images/cadastrar_login.svg" alt="Cadastrar">Cliente novo</button>
                 </div>
                 <div class="pagar_divida">
-                    <button><img src="assets/images/pagar_divida.svg" alt="Pagar divida">Pagar dívida</button>
+                    <button id="pagar_divida"><img src="assets/images/pagar_divida.svg" alt="Pagar divida">Pagar dívida</button>
                 </div>
-                <div class="aumentar_cred">
-                    <button><img src="assets/images/aumentar_divida.svg" alt="Aumentar dívida">Aumentar dívida</button>
+                <div class="aumentar_limite">
+                    <button id="aumentar_limite"><img src="assets/images/aumentar_divida.svg" alt="Aumentar dívida">Aumentar dívida</button>
                 </div>
             </div>
         </section>
-
-        <section class="pop-up_geral" id="Pop-up_geral">
-          <div class="icone">
+        
+        <div class="overlay" id="overlay"></div>
+        <section class="popup_cadastrar" id="popup_cadastrar">
+          <div class="icone_popupCadastrar">
             <img src="assets/images/cliente_pop-up.svg" alt="Cliente">
           </div>
 
@@ -61,7 +62,7 @@
               <input type="text" name="pessoas_autorizadas" id="pessoas_autorizadas">
             </div>
 
-            <div class="coluna_pop-up">
+            <div class="coluna_popup">
               <div class="pop-up" >
                 <label for="celular">Celular</label>
                 <input type="tel" name="celular" id="celular">
@@ -82,7 +83,7 @@
 
             <div class="botoes_cliente">
               <div class="btn_cancelar">
-                <button type="button" class="btn_cancelar"><img src="assets/images/btn_cancelar.svg" alt="Cancelar">Cancelar</button>
+                <button type="button" id="btn_cancelar"><img src="assets/images/btn_cancelar.svg" alt="Cancelar">Cancelar</button>
               </div>
               <div class="btn_cadastrar">
                 <button type="button"><img src="assets/images/cadastrar_login.svg" alt="Cadastrar cliente">Cadastrar</button>
@@ -93,9 +94,139 @@
 
         </section>
 
-        
+        <section class="popup_pagarDiv" id="popup_pagarDiv">
+          <div class="icone_popupPagardiv">
+            <img src="assets/images/pagarDiv_popup.svg" alt="Pagar Dívida">
+          </div>
+
+          <form>
+            <div class="pop-up">
+              <label for="valor">Valor</label>
+              <input type="number">
+            </div>
+
+            <div class="pop-up">
+              <label for="Cliente">Cliente</label>
+              <input type="text" name="cliente" id="cliente">
+            </div>
+
+            <div class="btn_pagarDiv">
+
+              <div class="btn_cancelar">
+                <button type="button" id="btn_cancelarPagarDiv"><img src="assets/images/btn_cancelar.svg" alt="Cancelar">Cancelar</button>
+              </div>
+
+              <div class="btn_finalizar">
+                <button type="button"><img src="assets/images/btn_finalizar.svg" alt="Botão finalizar">Finalizar</button>
+
+              </div>
+
+            </div>
+          </form>
+
+
+        </section>
+
+
+        <section class="popup_limite" id="popup_limite">
+          <div class="icone_popupLimite">
+            <img src="assets/images/limite_popup.svg" alt="Aumentar limite">
+          </div>
+
+          <form>
+            <div class="pop-up">
+              <label for="valor">Valor</label>
+              <input type="number">
+            </div>
+
+            <div class="pop-up">
+              <label for="Cliente">Cliente</label>
+              <input type="text" name="cliente" id="cliente">
+            </div>
+
+            <div class="btn_pagarDiv">
+
+              <div class="btn_cancelar">
+                <button type="button" id="btn_cancelarLimite"><img src="assets/images/btn_cancelar.svg" alt="Cancelar">Cancelar</button>
+              </div>
+
+              <div class="btn_finalizar">
+                <button type="button"><img src="assets/images/btn_finalizar.svg" alt="Botão finalizar">Finalizar</button>
+
+              </div>
+
+            </div>
+          </form>
+        </section>
+
+        <section class="popup_mais" id="popup_mais">
+          <div class="icone_popupCadastrar">
+            <img src="assets/images/cliente_pop-up.svg" alt="Cliente">
+          </div>
+
+          <form>
+            <div class="pop-up">
+              <label for="Nome">Nome</label>
+              <input type="text" id="nome" class="nome">
+            </div>
+
+            <div class="pop-up">
+              <label for="Pessoas_autorizadas">Pessoas autorizadas</label>
+              <input type="text" name="pessoas_autorizadas" id="pessoas_autorizadas">
+            </div>
+
+            <div class="coluna_popup">
+              <div class="pop-up" >
+                <label for="celular">Celular</label>
+                <input type="tel" name="celular" id="celular">
+              </div>
+              <div class="pop-up">
+                <label for="divida">Divida</label>
+                <input type="number" placeholder="R$ 0,00">
+              </div>
+              <div class="pop-up">
+                <label for="limite_total">Limite total</label>
+                <input type="number" placeholder="R$ 0,00">
+              </div>
+              <div class="pop-up">
+                <label for="limite_atual">Limite atual</label>
+                <input type="number" placeholder="R$ 0,00">
+              </div>
+            </div>
+
+            <div class="botoes_cliente">
+              <div class="btn_excluirMais">
+                <button type="button" id="btn_excluirMais"><img src="assets/images/excluir_popup.svg" alt="Cancelar">Excluir</button>
+              </div>
+              <div class="btn_editarMais">
+                <button type="button"><img src="assets/images/editar_popup.svg" alt="Cadastrar cliente">Editar</button>
+              </div>
+            </div>
+
+          </form>
+
+        </section>
+
+        <section class="listagem_clientes">
+          <div class="tabela">
+            <div class="titulos_tabela">
+              <div class="nome_cliente">Nome</div>
+              <div class="celular">Celular</div>
+              <div class="divida">Dívida</div>
+              <div class="mais">Mais</div>
+            </div>
+
+            <div class="corpo_tabela">
+              <div class="nome_clienteCorpo">Yasmin Monteiro</div>
+              <div class="celularCorpo">(11) 98222-8144</div>
+              <div class="dividaCorpo">R$ 525,00</div>
+             <div class="btn_mais">
+              <button id="btn_mais"><img src="assets/images/botao_mais.svg" alt="Mais informações"></button>
+            </div>
+            </div>
     </main>
     
     <script src="javascript/cliente.js"></script>
+    
 </body>
 </html>

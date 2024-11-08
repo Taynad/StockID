@@ -21,9 +21,9 @@ header{
 }
 
 .logo{
-    background-color: #0099dd;
-    color: white;
-    width: 85px;
+    filter: brightness(0) saturate(100%) invert(100%);
+    width: 110px;
+    height: auto;
 }
 
 
@@ -105,7 +105,7 @@ input {
     height: 40px;
 }
 
-.aumentar_cred img {
+.aumentar_limite img {
     padding-right: 4px;
     width: 40px;
     height: 40px;
@@ -136,42 +136,61 @@ input {
     box-shadow: 2px 2px 10px #FF9933
 }
 
-.icone {
+.icone_popupCadastrar {
     display: flex;
     justify-content: center;
 }
 
-.icone img{
+.icone_popupCadastrar img{
     width: 120px;
     margin-top: 4px;
     margin-bottom: 4px;
 }
 
-
-
-.pop-up_geral{
+.popup_mais{
     background-color: #DAEBF2;
     border: 5px solid #0099dd;
     border-radius: 15px;
-    width: 550px;
+    width: 600px;
     padding: 25px;
     padding-top: 0px;
     width: 40%;
     height: 60%;
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1000;  
-    align-items: center;
-    justify-content: center;
-    
-    
 }
 
-.pop-up_geral.active{
-    display: flex;
 
+.popup_cadastrar{
+    background-color: #DAEBF2;
+    border: 5px solid #0099dd;
+    border-radius: 15px;
+    width: 600px;
+    padding: 25px;
+    padding-top: 0px;
+    width: 40%;
+    height: 60%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;  
+}
+
+.overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    z-index: 1000; 
 }
 
 .pop-up{
@@ -181,7 +200,7 @@ input {
 }
 
 .pop-up label{
-    color: #0099dd;
+    color: #0376C4;
     font-weight: bolder;
     font-size: 25px;
     display: flex;
@@ -200,18 +219,18 @@ input {
     width: 100%;
 }
 
-.coluna_pop-up{
+.coluna_popup{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     
 }
 
-.coluna_pop-up input{
+.coluna_popup input{
     padding-left: 2px;
 }
 
-.coluna_pop-up .pop-up {
+.coluna_popup .pop-up {
     flex: 1 1 calc(50% - 20px);
     box-sizing: border-box;
 }
@@ -281,5 +300,233 @@ input {
     transform: scale(1.1);
     transition-duration: 300ms;
     box-shadow: 2px 2px 10px #FB0000
+}
+
+.popup_pagarDiv{
+    background-color: #DAEBF2;
+    border: 5px solid #0099dd;
+    border-radius: 15px;
+    width: 300px;
+    padding: 25px;
+    padding-top: 0px;
+    width: 25%;
+    height: 35%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;  
+}
+
+.icone_popupPagardiv{
+    display: flex;
+    justify-content: center;
+}
+
+.icone_popupPagardiv img {
+    width: 80px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    
+}
+
+.btn_pagarDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn_finalizar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #32FB00;
+    background-color: white;
+    border: 3px solid #32FB00;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.btn_finalizar img{
+margin-right: 10px;
+}
+
+.btn_finalizar :hover img{
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.btn_finalizar button:hover{
+    color: white;
+    background-color: #32FB00;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px #32FB00
+}
+
+.popup_limite{
+    background-color: #DAEBF2;
+    border: 5px solid #0099dd;
+    border-radius: 15px;
+    width: 300px;
+    padding: 25px;
+    padding-top: 0px;
+    width: 25%;
+    height: 35%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;  
+}
+
+.icone_popupLimite{
+    display: flex;
+    justify-content: center;
+}
+
+.icone_popupLimite img{
+    width: 80px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.titulos_tabela{
+    margin-top: 80px;
+    color: #263672;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nome_cliente{
+    margin-left: 60px;
+}
+
+.celular{
+    margin-left: 60px;
+}
+
+.mais{
+    margin-right: 30px;
+}
+
+.corpo_tabela{
+    color: white;
+    background-color: #0099dd;
+    border: 5px solid #FF9933;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.btn_mais button{
+    margin-top: 10px;
+    border: none;
+    background-color: #0099dd;
+}
+
+.btn_mais button img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.nome_clienteCorpo{
+    margin-top: 10px;
+}
+
+.celularCorpo{
+    margin-top: 10px;
+}
+
+.dividaCorpo{
+    margin-top: 10px;
+    margin-right: 40px;
+}
+    
+.btn_mais button:hover{
+    color: white;
+    transform: scale(1.2);
+    transition-duration: 300ms;
+}
+
+.btn_excluirMais button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #FB0000;
+    background-color: white;
+    border: 3px solid #FB0000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 8px;
+    width: 200px;
+}
+
+.btn_excluirMais img{
+    margin-right: 20px;
+}
+
+.btn_excluirMais:hover img{
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.btn_excluirMais button:hover{
+    color: white;
+    background-color: #FB0000;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px #FB0000
+}
+
+.btn_editarMais button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #FF9933;
+    background-color: white;
+    border: 3px solid #FF9933;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 8px;
+    width: 200px;
+    
+}
+
+.btn_editarMais:hover img{
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.btn_editarMais button:hover{
+    color: white;
+    background-color: #FF9933;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 10px #FF9933;
+}
+
+.btn_editarMais img{
+    margin-right: 20px;
+    
 }
 
